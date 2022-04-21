@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test CPS</title>
+</head>
+<body>
+    <center>
+        <h1>CPS TesT</h1>
+        <br>
+        <h2> Id="cps"> Click anywhere to begin</h2>        
+    </center>
+
+    <script>
+        //cps
+        var cps = 0;
+        //clicks
+        var clicks = 0;
+        //ms slince started
+        var ms = 0;
+        //is game started
+        var started = false; 
+        
+        
+        setInterval(() => {
+            if(started) {
+              ms += 10;
+              cps = Math.round( clicks / (ms / 1000);
+              unpdate();  
+            }, 10)
+
+
+        
+        /**
+        *
+        *updates the cps counte
+        * **/
+        function update() {
+            document.getElementById("cps").innerHTML = "your cps: "+cps
+        }
+
+        //called when window is clicked
+        window.onclick = function() {
+            //start the game
+            if(!started)
+            started = true;
+            return;
+        }    
+    </script>
+</body>
+</html>
